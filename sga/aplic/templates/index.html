@@ -1,31 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% load static %}
+{% load bootstrap5 %}
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>SGA</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sistema de Controle Acadêmico</title>
+     {% bootstrap_css %}
 </head>
-<body>
-<style>
-    div {
-    background-color: red;
-    height: 100px;
-    }
-</style>
-<h1>Olá, mundo!</h1>
-<h2>Este é o SGA</h2>
-<div>
-    oláaaaaaa 123
-</div>
-<ul>
-    <li>
-        <a href="teste">Teste</a>
-    </li>
-    <li>
-         <a href="sobre">Sobre</a>
-    </li>
-    <li>
-        <a href="contato">Contato</a>
-    </li>
-</ul>
+
+<body class="d-flex flex-column h-100">
+<header>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SGA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cursos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    {% bootstrap_javascript %}
+</header>
+
+<main>
+    saf
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Sistema de Controle acadêmico.</span>
+    <span class="text-muted">Copy Right 2024.</span>
+  </div>
+</footer>
+
 </body>
 </html>
