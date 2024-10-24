@@ -8,6 +8,20 @@ class IndexView(TemplateView):
         context = super(IndexView, self).get_context_data(**kwargs)
         return context
 
+class CursoView(TemplateView):
+    template_name = 'curso.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(CursoView, self).get_context_data(**kwargs)
+        return context
+
+class ProfessorView(TemplateView):
+    template_name = 'professor.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ProfessorView, self).get_context_data(**kwargs)
+        return context
+
 class TesteView(TemplateView):
     template_name = 'teste.html'
 
