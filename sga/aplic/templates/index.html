@@ -19,4 +19,26 @@
     </div>
   </div>
 
+<div class="container">
+<!-- Listagem de Cursos -->
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    {% for curso in cursos %}
+       <div class="card" style="width: 18rem;">
+          <img src="{{ curso.imagem.thumb.url }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{curso.nome}}</h5>
+            <p class="card-text">
+                {{curso.descricao}}. Carga Horária: {{curso.carga_horaria}}
+            </p>
+            <a href="/curso-detalhe/{{curso.id}}" class="btn btn-primary">Saiba mais</a>
+          </div>
+        </div>
+    {% endfor %}
+
+      </div>
+</div>
+
+
+
 {% endblock %}

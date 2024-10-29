@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import IndexView, TesteView, ContatoView, SobreView, CursoView, ProfessorView
+from .views import IndexView, TesteView, ContatoView, SobreView, CursoView, ProfessorView, CursoDetalheView
 from rest_framework.routers import SimpleRouter
 
 
@@ -10,6 +10,7 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
 
     path('curso', CursoView.as_view(), name='curso'),
+    path('curso-detalhe/<int:id>/', CursoDetalheView.as_view(), name='curso-detalhe'),
     path('professor', ProfessorView.as_view(), name='professor'),
 
     path('teste', TesteView.as_view(), name='teste'),
